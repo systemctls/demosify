@@ -1,6 +1,6 @@
 {
   "name": "wccode-demo",
-  "version": "0.1.1",
+  "version": "0.1.4",
   "description": "Create a playground to show demos of your projects.",
   "main": "bin/cli.js",
   "author": "betseyliu",
@@ -24,7 +24,7 @@
     "@babel/preset-react": "^7.17.12",
     "@vue/eslint-config-prettier": "^4.0.1",
     "babel-eslint": "^10.0.2",
-    "babel-loader": "^8.2.5",
+    "babel-loader": "^8.0.4",
     "element-ui": "^2.15.6",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.2.3",
@@ -36,7 +36,7 @@
     "normalize.css": "^8.0.1",
     "nprogress": "^0.2.0",
     "perfect-scrollbar": "^1.4.0",
-    "poi": "^12.7.0",
+    "poi": "12.10.3",
     "raw-loader": "^3.0.0",
     "require-from-string": "^2.0.2",
     "sass": "^1.49.9",
@@ -50,6 +50,7 @@
   },
   "devDependencies": {
     "@babel/standalone": "7.17.12",
+    "babel-plugin-component": "^1.1.1",
     "docsify": "^4.9.4",
     "merge": "^1.2.1"
   }

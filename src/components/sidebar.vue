@@ -25,9 +25,9 @@
         class="filter-tree"
         :data="showLinks"
         :props="defaultProps"
-        default-expand-all
         @node-click="treeClick"
         :filter-node-method="filterNode"
+        accordion
         ref="tree"
       >
       </el-tree>
