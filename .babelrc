@@ -1,18 +1,28 @@
 {
   "presets": [
-      ["@babel/preset-env"],
-      ["@babel/preset-react"]
+    [
+      "@babel/preset-env",
+      {
+        "modules": false,
+        "debug": false,
+        "useBuiltIns": false,
+        "targets": {
+          "browsers": ["> 1%", "last 2 versions", "not ie < 11"]
+        }
+      }
+    ],
+    ["@babel/preset-react"]
   ],
   "plugins": [
-      "@babel/plugin-transform-runtime",
-      [
-        "component",
-        {
-          "libraryName": "element-ui",
-          "styleLibraryName": "theme-chalk"
-        }
-      ],
-      ["@babel/plugin-proposal-class-properties", { "loose": true }],
-      ["@babel/plugin-proposal-private-methods", { "loose": true }]
+    "@babel/plugin-transform-runtime",
+    [
+      "component",
+      {
+        "libraryName": "element-ui",
+        "styleLibraryName": "theme-chalk"
+      }
+    ],
+    ["@babel/plugin-proposal-class-properties", { "loose": true }],
+    ["@babel/plugin-proposal-private-methods", { "loose": true }]
   ]
 }
