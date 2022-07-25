@@ -44,12 +44,13 @@
           :key="type"
           @click="updateCurrentBox(type)"
         >
-          <!-- <span class="editor-tabName">{{
-            content.tabName || type.toUpperCase()
-          }}</span> -->
-          <span>
+        <!-- todo: tabsName 为什么要去掉呢 -->
+          <span class="editor-tabName">{{
+            content.tabName || content.transformer || type.toUpperCase()
+          }}</span>
+          <!-- <span>
             {{ content.transformer }}
-          </span>
+          </span> -->
         </li>
       </ul>
       <sandbox
