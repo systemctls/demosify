@@ -3,6 +3,28 @@
 fix: 重复路由点击报错(vue router ≥ v3.1 后 ，回调形式改成promise api了，返回的是promise，如果没有捕获到错误，控制台警告程序卡死)
 
 1.0.0 支持无限嵌套，部分代码优化。
+```
+{
+  "label": "framework2",
+  "src": "framework2",
+  "children": [
+    {
+      "label": "Vue2",
+      "src": "vue22",
+      "children": [
+        {
+          "label": "vue222",
+          "src": "vue222"
+        }
+      ]
+    },
+    {
+      "label": "React2",
+      "src": "react test2"
+    }
+  ]
+}
+```
 
 
 
