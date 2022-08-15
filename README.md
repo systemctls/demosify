@@ -2,6 +2,8 @@
 
 fix: 重复路由点击报错(vue router ≥ v3.1 后 ，回调形式改成promise api了，返回的是promise，如果没有捕获到错误，控制台警告程序卡死)
 
+1.0.0 支持无限嵌套，部分代码优化。
+
 
 
 👉🏻 [website](https://www.demosify.com) | 👉🏻 [online demo](https://demosify.github.io/demosify-demo/)

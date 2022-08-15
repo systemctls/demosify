@@ -25,7 +25,7 @@ config = Object.assign(
     // tomorrowNightBright, tomorrowNightEighties, tomorrowNight, tomorrow,
     // twilight, vibrantInk, zenburnesque, iplastic, idlefingers, krtheme,
     // monoindustrial,
-    boxTheme: 'monokai',
+    boxTheme: 'clouds',
     globalPackages: {
       js: [],
       css: []

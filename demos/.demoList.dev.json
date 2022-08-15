@@ -16,10 +16,9 @@
     "src": "rawdata test"
   },
   {
-    "group":"framework",
     "label": "framework",
     "src": "framework",
-    "demos": [
+    "children": [
       {
         "label": "Vue",
         "src": "vue test"
@@ -29,13 +28,18 @@
         "src": "react test"
       },
       {
-        "group":"framework2",
         "label": "framework2",
         "src": "framework2",
-        "demos": [
+        "children": [
           {
             "label": "Vue2",
-            "src": "vue test2"
+            "src": "vue22",
+            "children": [
+              {
+                "label": "vue222",
+                "src": "vue222"
+              }
+            ]
           },
           {
             "label": "React2",

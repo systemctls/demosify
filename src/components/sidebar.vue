@@ -24,7 +24,6 @@
       <el-tree
         class="filter-tree"
         :data="showLinks"
-        :props="defaultProps"
         @node-click="treeClick"
         :filter-node-method="filterNode"
         accordion
@@ -48,10 +47,6 @@ export default {
       isShowingMoreCrossed: false,
       unfolded: [],
       filterText: "",
-      defaultProps: {
-        children: "demos",
-        label: "label",
-      },
     };
   },
   watch: {
@@ -77,24 +72,6 @@ export default {
     ...mapState(["links"]),
     ...mapState({
       showLinks(state) {
-        state.links.forEach((demo) => {
-          if (demo.demos) {
-            demo.demos.forEach((child) => {
-              if (child.demos) {
-                child.demos.forEach((childs) => {
-                  if (typeof childs !== "string") {
-                    childs.path =
-                      "/" + demo.src + "/" + child.src + "/" + childs.src;
-                  }
-                });
-              } else if (typeof child !== "string")
-                child.path = "/" + demo.src + "/" + child.src;
-            });
-          }
-          if (typeof demo !== "string") demo.path = "/" + demo.src;
-          // return demo;
-        });
-        console.log("state. state.demoList===>", state.links);
         return state.links;
       },
     }),
@@ -133,13 +110,13 @@ export default {
       return data.label.indexOf(value) !== -1;
     },
     treeClick(data, node, tmp) {
-      console.log(data, node, tmp);
-      !data.group &&
-        this.$router.replace({ path: data.path }).catch((err) => {
-          console.log("输出报错", err);
+      const path = "/" + data.path;
+      console.log("[ path ] >", path);
+      // 分组不跳转
+      !data.children &&
+        this.$router.push({ path }).catch((err) => {
+          console.log("路由跳转输出报错", err);
         });
-      // this.$router.replace({path:'/framework/framework2/react test2'})
-      //  !data.group && this.$router.push({path:'/framework/react test'})
     },
     toogleVisible(group) {
       const index = this.unfolded.indexOf(group);
